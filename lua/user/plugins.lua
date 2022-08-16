@@ -81,7 +81,18 @@ return packer.startup(function(use)
   use "terrortylor/nvim-comment"
   require('nvim_comment').setup()
     -- surround highlighted text
+use({
+    "kylechui/nvim-surround",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+})
   use "tpope/vim-surround"
+  use "tpope/vim-rails"
+  -- smooth scrolling
+  use "psliwka/vim-smoothie"
 
   -- run code
   use 'is0n/jaq-nvim'
