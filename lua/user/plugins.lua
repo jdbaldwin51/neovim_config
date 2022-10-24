@@ -57,10 +57,29 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
+
+  -- tidy up that trailing whitespace
+  	use({ -- Remove trailing ws and empty end lines
+		"mcauley-penney/tidy.nvim",
+		config = function()
+			require("tidy").setup()
+		end,
+	})
+
+  use("j-hui/fidget.nvim")
+
+	use("rcarriga/nvim-notify")
+	use({
+		"folke/todo-comments.nvim", -- Highlight todos, and provide command to search all todos
+		requires = "nvim-lua/plenary.nvim",
+		config = function()
+			require("todo-comments").setup({})
+		end,
+	})
     -- Colorschemes
   -- use "lunarvim/colorschemes" -- A bunch of colorschemes you can try out
   use "lunarvim/darkplus.nvim"
-  
+
   use "vim-scripts/rainbow-end"
   use "luisiacc/gruvbox-baby"
   -- cmp plugins
@@ -74,7 +93,9 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  
+
+  -- add puts or p or print or console.log
+  use "steven-liou/console-puts"
   -- comment code
   --use "numToStr/Comment.nvim" -- Easily comment stuff
   --use "JoosepAlviste/nvim-ts-context-commentstring"

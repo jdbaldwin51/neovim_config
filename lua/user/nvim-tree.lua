@@ -19,7 +19,7 @@ nvim_tree.setup {
     "dashboard",
     "alpha",
   },
-  auto_close = true,
+  -- auto_close = true,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -56,7 +56,7 @@ nvim_tree.setup {
   },
   view = {
     width = 30,
-    height = 30,
+    -- height = 30,
     hide_root_folder = false,
     side = "left",
     -- auto_resize = true,
@@ -68,8 +68,8 @@ nvim_tree.setup {
         { key = "v", cb = tree_cb "vsplit" },
       },
     },
-    number = false,
-    relativenumber = false,
+    number = true,
+    relativenumber = true,
   },
   trash = {
     cmd = "trash",

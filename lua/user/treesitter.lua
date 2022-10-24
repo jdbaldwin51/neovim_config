@@ -5,11 +5,9 @@ if not status_ok then
 end
 
 configs.setup {
-  ensure_installed = "maintained",
   ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false,
   ignore_install = { "phpdoc" }, -- List of parsers to ignore installing
-  ignore_install = { "" }, -- List of parsers to ignore installing
 
   autopairs = {
 		enable = true,

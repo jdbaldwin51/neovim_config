@@ -79,3 +79,5 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 -- Nvim Tree --
 keymap("n","<leader>e", ":NvimTreeToggle<cr>", opts)
 
+-- jaq --
+keymap("n", "<C-<CR>", ":Jaq<CR>", opts)
