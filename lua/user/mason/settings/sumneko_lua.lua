@@ -1,4 +1,3 @@
-
 return {
 	settings = {
 
@@ -13,5 +12,5 @@ return {
 				},
 			},
 		},
-  },
+	},
 }
